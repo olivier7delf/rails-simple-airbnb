@@ -1,0 +1,24 @@
+<h1>Filtered flats (<%= @flats.length %>) </h1>
+
+<%= link_to "add a flat", new_flat_path %>
+
+<div class="container row">
+
+  <% @flats.each do |flat| %>
+    <div class="col-3" style='background-color: rgba(150,150,150, .1); margin:10px;'>
+
+      <img src=<%= flat.picture_url %> alt="" style="height: 150px; width:150px; display: block;">
+
+      <div>
+        <%= flat.name %>
+
+        <%= flat.address %>
+
+        <%= flat.number_of_guest %>
+        <%= flat.price_per_night %>
+      </div>
+        <%= link_to "more details", flat_path(flat) %>
+    </div>
+  <% end %>
+</div>
+<%= link_to "index", flats_path, class: "btn btn-primary" %>

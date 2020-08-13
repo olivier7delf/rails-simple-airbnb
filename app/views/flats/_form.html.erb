@@ -1,0 +1,14 @@
+<div class="container">
+  <%= simple_form_for flat do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :address %>
+    <%= f.input :price_per_night %>
+    <%= f.input :number_of_guest %>
+    <%= f.input :picture_url %>
+
+    <%= f.submit "Submit if you deeply think it s alright", class: "btn btn-primary" %>
+  <% end %>
+
+  <%= link_to "index", flats_path, class: "btn btn-primary" %>
+</div>

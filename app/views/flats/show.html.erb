@@ -1,0 +1,15 @@
+<h1><%= @flat.name %></h1>
+
+<h3>Details</h3>
+
+<%= link_to "edit", edit_flat_path(@flat) %>
+<img src=<%= @flat.picture_url %> alt="" style="height: 250px; width:350px; display: block;">
+<div>
+  <%= @flat.name %>
+  <%= @flat.description %>
+  <%= @flat.address %>
+  <%= @flat.number_of_guest %>
+  <%= @flat.price_per_night %>
+</div>
+
+<%= link_to "index", flats_path, class: "btn btn-primary" %>
